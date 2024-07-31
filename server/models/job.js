@@ -1,6 +1,6 @@
-import {Schema, Model} from "mongoose";
+import mongoose from "mongoose";
 
-export const JobSchema = new Schema({
+export const JobSchema = new mongoose.Schema({
     start_date: {
         type: Date,
         required: true,
@@ -23,5 +23,5 @@ export const JobSchema = new Schema({
     }
 })
 
-const Jobs = Model('job', JobSchema);
+const Jobs = mongoose.model('job', JobSchema);
 export default Jobs;
